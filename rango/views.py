@@ -46,7 +46,7 @@ def add_category(request):
             cat = form.save(commit=True)
             print(cat)
 
-            return redirect('/rango/')
+            return redirect(reverse('rango:index'))
         else:
 
             print(form.errors)
